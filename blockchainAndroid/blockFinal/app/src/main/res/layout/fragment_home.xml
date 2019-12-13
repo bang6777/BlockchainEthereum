@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_home"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="4dp"
+                    android:text="TRA CỨU NGUỒN GỐC SẢN PHẨM NÔNG SẢN"
+                    android:textAlignment="center"
+                    android:textSize="17sp"
+                    android:textStyle="bold|italic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="#3E87D3F1"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="378dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:text="Truy xuất nguồn gốc sản phẩm giúp người dùng có thêm thông tin về sản phẩm sử dụng, đảm bảo chất lượng sản phẩm cũng như thông tin rõ ràng và minh bạch"
+                            android:textColor="#D81F1D1D"
+                            android:translationX="2dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="438dp"
+                            android:layout_height="142dp"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:maxHeight="170dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/background1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="117dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#8B0A78CF"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#8B0A78CF"
+                            android:paddingRight="20dp"
+                            android:text="Tra cứu"
+                            android:textColor="#D9E4EC"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/tracuu"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#8B0A78CF"
+                            android:paddingRight="10dp"
+                            app:srcCompat="@android:drawable/ic_menu_search"
+                            tools:scrollbarStyle="outsideOverlay" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="#3E4CAF50"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@android:style/Widget.DeviceDefault.Light.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:text="Truy xuất nguồn gốc là gì ?"
+                        android:textAlignment="center"
+                        android:textColor="#E91C1C1F"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Truy xuất nguồn gốc là một giải pháp giúp người dùng truy xuất, tìm hiểu về thông tin nguồn gốc, xuất xứ của sản phẩm mà họ đã mua"
+                        android:textAlignment="center"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#7587D3F1"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Các giai đoạn truy xuất"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#39CDDC39"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/caygiong" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Giai Đoạn Trồng Cây Giống"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cung cấp thông tin về hạt giống gieo, loại hạt, thời gian trồng, kỹ thuật trồng cây giống,...."
+                            android:textAlignment="center"
+                            android:textStyle="normal|italic" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#3E87D3F1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Giai Đoạn Trồng Cây Ăn Trái"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cung cấp thông tin về phân bón, thuốc xịt cây, thời gian,... đảm bảo tiêu chuẩn trồng trọt"
+                            android:textAlignment="center"
+                            android:textStyle="normal|italic" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/cayantrai" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#39CDDC39"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/thumua" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Giai Đoạn Thu Mua"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cung cấp thông tin về địa điểm thu mua, tên người thu mua, cách thức thu hoạch, phân loại, các thông tin bảo quản, đóng gói,...."
+                            android:textAlignment="center"
+                            android:textStyle="normal|italic" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#3E87D3F1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewpp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Giai Đoạn Phân Phối"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewpp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cung cấp thông tin về đơn vị phân phối, người vận chuyển, cách thức bảo quản,...."
+                            android:textAlignment="center"
+                            android:textStyle="normal|italic" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageViewpp1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/phanphoi" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="#39CDDC39"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewbl1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/banle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewbl2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Giai Đoạn Bán Lẻ"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewbl3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cung cấp thông tin về địa điểm bán lẻ, lô hàng nhận, phân loại sản phẩm,...."
+                            android:textAlignment="center"
+                            android:textStyle="normal|italic" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

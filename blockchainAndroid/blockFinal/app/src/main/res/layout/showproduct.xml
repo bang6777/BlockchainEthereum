@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    <TextView-->
+<!--        android:id="@+id/clickbang"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="TextView" />-->
+    <TextView
+        android:id="@+id/textViewProduct"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="0.5dp"
+
+            android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
+    </LinearLayout>
+
+
+</LinearLayout>
