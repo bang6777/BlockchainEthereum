@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Metamorphosis Design Free Css Templates</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="index.css" rel="stylesheet" type="text/css" />
+        <link href="uploadfile.css" rel="stylesheet">
+        <script type="text/javascript" src="./api/js/libs/qrcode.min.js"></script>
+		
+    //- <script type="text/javascript" src="./qrcode.min.js"></script>
+
+    </head>
+
+    <body onload=getName() class="loadpages">
+<div class="loading" id="loading" style="display: none">
+<div class="blob blob-0"></div>
+</div>
+    <script>alert("Đã thêm thành công")</script>
+    <script>function getName(){{$.ajax({method: "GET",url: "http://localhost:4000/login",contentType: "application/json",success: function (response) {if(response!= "no"){document.getElementById("name").innerHTML="";document.getElementById("logout").innerHTML="<a href='http://localhost:4000/signout'>"+"<span class='glyphicon glyphicon-user'>"+response+" <span class='glyphicon glyphicon-log-out'></span></a>"};},error: function (e) {alert("Đã có lỗi xảy ra!");console.log(e);}});}}</script>
+        <div class="container">
+            <div id="contmain">
+                <div id="left1">
+                    <div id="right1">
+                        <div id="header">
+                            <div id="logo">
+                                <h1>SEED PRODUCTION PROCESS</h1>
+                               
+                            </div>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="/admin" class='active contentcaygiong'>Người dùng</a></li>
+                                    <li><a href="/caygiong">Sản phẩm</a></li>
+                                    <li><a href="#">Giao diện</a></li>
+                                    <li><a href="./xulydangki.php">Tạo mã qr</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                                      //- <li >Tên đăng nhập</li>
+                                    <li id="name"><a href="#" data-toggle="modal" data-target="#myform"> <span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
+                                    <li id="logout"></li>
+                       
+                            </ul>  
+
+                        </div>
+                        <!-- end header --></div>
+                        <!-- start page -->
+                        <div class="row">
+                        <div class="col-md-8">
+                        <div id="page">   
+                        <!-- start content -->
+<div id="content">
+<div class="post">
+<button class="btn btn-success" data-toggle="modal" data-target="#Dangkiform">Craete User</button>
+<h1 class="title"><a href="#">Thông tin người dùng</a></h1>
+<div class="row table-responsive-sm">
+<table class="table table-bordered table-condensed table-hover table-sm" id="user">
+<thead >
+<tr class="d-flex">
+<th></th>
+<th>STT</th>
+<th>Id</th>
+<th>Tên nguời dùng</th>
+<th>email</th>
+<th>password</th>
+<th>Giới tính</th>
+<th>Ngày sinh</th>
+<th>Thời gian tạo</th>
+<th>Thời gian chỉnh sửa</th>
+<th>Số điện thoại</th>
+<th>Địa chỉ</th>
+<th>Anh đại diện</th>
+<th>Trạng thái</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+    </table>
+    <div class="pagination-container">
+        <nav><ul id="paginationCaygiong" class="pagination"></ul></nav></div>
+    </div>
+                                   </div>
+</div>
+                        </div>
+                        </div>
+                        <!-- end content -->
+                        <div id="bottom" style="clear: both;"></div>
+                        </div>
+                            <!-- end page --><!-- start footer -->
+                            <!-- start footer -->
+                            <footer>
+                                <div class="wrapper">
+                                    <div class="rights">
+                                        <img src="" alt="" class="footer_logo"/>
+                                    </div>
+
+                                    <nav>
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><p class="nav navbar-nav navbar-right">Nguyen Chi Linh <a href="http://pixelhint.com" target="_blank">Gmail.com</a></p></li>
+                                            <li><a href="#">Admin</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>    
+                            </footer>
+                            <!--  End footer  -->
+                        </div>
+</div>
+                </div>
+</div>
+            <div class="modal fade" id="myform" role="dialog"><div class="modal-dialog">
+            <div class="modal-content"><div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h2 class="modal-title" style="text-align: center"><span class="glyphicon glyphicon-lock"></span> Đăng nhập người dùng</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" action="/auth" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Tên người dùng</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Nhập tên của bạn đã đăng kí" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Mật khẩu</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="password" id="passwords" placeholder="Nhập mật khẩu của bạn" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>   
+                    <div class="form-group">
+                     <div class="col-xs-10 col-xs-offset-2">
+                         <input type="checkbox" name=""> Ghi nhớ tôi 
+                     </div>                     
+                     </div>    
+                     <button type="submit" class="btn btn-success btn-sm" style="width: 100%">
+                     <i class="fa fa-plus"></i> Đăng nhập</button>
+                </form>
+</div>
+    <div class="modal-footer">
+        
+        <div>
+            <label>Nếu bạn chưa phải là thành viên hãy <li><a href="#" data-toggle="modal" data-target="#Dangkiform"><span class="glyphicon glyphicon-log-in"></span>Đăng kí</a></li></label>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            <div class="modal fade" id="Dangkiform" role="dialog"><div class="modal-dialog">
+            <div class="modal-content"><div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h2 class="modal-title" style="text-align: center"><span class="glyphicon glyphicon-lock"></span> Đăng ký người dùng</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" action="/signup" method="post">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Họ Tên</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Họ tên người dùng" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Email</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Mật khẩu</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Mật khẩu" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Nhập lại mật khẩu</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="passconfim" id="passagain" placeholder="Mật khẩu" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="council" class="col-sm-2 control-label">Giới tính</label>
+
+                        <div class="col-sm-2">
+                            <label>Nam: </label><input type="radio" name="gender" class="gender" value="Nam" checked/> 
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Nữ: </label><input type="radio" name="gender" class="gender" value="Nữ"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="birthplace" class="col-sm-2 control-label">Ngày sinh</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" name= "birthday" id="birthday" placeholder="Ngày sinh" data-parsley-required="true" data-parsley-type="number" data-parsley-error-message="Bắt buộc là số.">
+                    </div>
+                    </div>
+                <!--  -->
+                    <div class="form-group">
+                    <label for="number" class="col-sm-2 control-label">Số điện thoại</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control"name="phonenum" id="phonenum" placeholder="Số điện thoại" data-parsley-required="true" data-parsley-type="number" data-parsley-error-message="Bắt buộc là số.">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Địa chỉ</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Địa chỉ" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                    </div>
+                    </div>
+
+    
+                    <button type="submit" class="btn btn-success btn-sm" style="width: 100%">Đăng ký</button>
+                    <i class="fa fa-plus"></i> 
+            
+                </form>
+                </div>
+            <div class="modal-footer">
+            </div>
+            
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Modal Insert -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+<script type="text/javascript"src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript" src="../api/js/abi/StorageABI.js"></script>
+<script type="text/javascript" src="../api/js/libs/jquery.validate.js"></script>
+<script type="text/javascript" src="../api/js/loadpage.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../api/js/libs/parsley.min.js"></script>
+<script src="../api/js/libs/jquery.uploadfile.js"></script>
+<!--Begin export excel-->
+<script type="text/javascript" src="../api/js/libs/jquery.table2excel.js"></script>
+<!--End export excel-->
+<!--Time moment-->
+<script type="text/javascript" src="../api/js/libs/momentjs.js"></script>
+//- <script type="text/javascript" src="./api/js/libs/qrcode.min.js"></script>
+//- <script type="text/javascript" src="../api/js/createqrcode.js"><script>
+<!--End time moment-->
+</body>
+</html>

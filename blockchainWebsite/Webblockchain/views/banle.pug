@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Metamorphosis Design Free Css Templates</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="caygiong.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload=getName() class="loadpages">
+	<div class="loading" id="loading" style="display: none">
+		<div class="blob blob-0"></div>
+		</div>
+		<script>function getName(){{$.ajax({method: "GET",url: "http://localhost:4000/login",contentType: "application/json",success: function (response) {if(response!= "no"){document.getElementById("name").innerHTML="";document.getElementById("logout").innerHTML="<a href='http://localhost:4000/signout'>"+"<span class='glyphicon glyphicon-user'>"+response+" <span class='glyphicon glyphicon-log-out'></span></a>" };},error: function (e) {alert("Đã có lỗi xảy ra!");console.log(e);}});}}</script>
+	
+	//<button name="" id="addbanle" onclick="viewbanle()" class="btn btn-success" style="width: 100%"><span class="glyphicon glyphicon-off"></span>View</button>
+	<!-- start header -->
+	<div class="container">
+		<div id="contmain">
+			<div id="left1">
+				<div id="right1">
+					<div id="header">
+						<div id="logo">
+							<h1>SEED PRODUCTION PROCESS</h1>
+						</div>
+						<div id="menu">
+							<ul>
+								<li><a href="/caygiong" class='contentcaygiong'>Home</a></li>
+								<li><a href="/contact">Liên hệ</a></li>
+								<li><a href="#">Hỗ trợ</a></li>
+								<li><a href="/banle"> Bán lẻ</a></li>
+								<li><a href="#"> Search</a></li>
+								<li id="name"><a href="#" data-toggle="modal" data-target="#myform"> <span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
+								<li id="logout"></li>
+							</ul>  
+
+						</div>
+						
+						<!-- end header --></div>
+						<!-- start page -->
+						<div class="row">
+						<div class="col-md-8">
+						<div id="page"><!-- start content -->
+							<div id="content">
+								<div class="post">
+									<h1 class="title"><a href="#">Giai Đoạn Bán Lẻ</a></h1>
+									<div class="row table-responsive-sm">
+										<table class="table table-bordered table-condensed table-hover table-sm" id="banle">
+											<thead >
+												<tr class="d-flex">
+													<th></th>
+													<th>STT</th>
+													<th>Id</th>
+													<th>Tên sản phẩm</th>
+													<th>Tên người ban le</th>
+													<th>Nơi ban le</th>
+													<th>Cách thưc ban le</th>
+													<th>Bảo quản</th>
+													<th>Thời gian tạo</th>
+													<th>Thời gian chỉnh sửa</th>
+													<th>Trạng thái</th>
+
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+										</table>
+										<div class="pagination-container">
+											<nav><ul id="paginationbanle" class="pagination"></ul></nav></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<!-- end content -->
+						<div id="bottom" style="clear: both;"></div>
+					</div>
+					<!-- end page --><!-- start footer -->
+					<footer>
+						<div class="wrapper">
+							<div class="rights">
+								
+								<p class="nav navbar-nav navbar-right">Nguyen Chi Linh <a href="http://pixelhint.com" target="_blank">Gmail.com</a></p>
+							</div>
+
+							<nav>
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="#">About</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact</a></li>
+								</ul>
+							</nav>
+						</div>    
+					</footer><!--  End footer  -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Insert -->
+	<div class="modal fade" id="InsertBanleform" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h1 class="modal-title" style="text-align: center"><span class="glyphicon glyphicon-lock"></span> Thêm Giai Đoạn Bán Lẻ</h1>
+				</div>
+				<div class="modal-body">
+					<div class="panel panel-info">
+						<div class="panel-heading">Add</div>
+						<div class="panel-body">
+							<div class="form-vertical">
+								<div class="form-group">
+									<label>ID Sản Phẩm:  </label>
+									<span id="idsanphambanle"><p></p></span>
+								</div> 
+								<div class = "form-group">
+									<label>Tên người ban le</label>
+									<input type="text" name="" id="nguoibanle" class="form-control" placeholder="Nhập tên người ban le">
+								</div>
+								<div class="form-group">
+									<label>Nơi ban le:</label>
+									<input type="text" name="" id="noibanle" class="form-control" placeholder="Nhập tên địa điểm ban le">
+								</div> 
+
+								<div class="form-group">
+									<label>Cách thức ban le:</label>
+
+									<input type="text" name="" id="cachthucbanle" class="form-control" placeholder="Nhập tên người trồng cây giống">
+
+								</div>
+								<div class="form-group">
+									<label>Phương thức bảo quản:</label>
+
+									<input type="text" name="" id="baoquanbanle" class="form-control" placeholder="Nhập phương thức bảo quản">
+
+								</div>
+								<div class="form-group">
+									<button name="" id="addbanle" onclick="addbanle()" class="btn btn-success" style="width: 100%"><span class="glyphicon glyphicon-off"></span>add</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="col-xs-6">
+						<button type="button" class="btn btn-danger pull-left" data-dismiss="modal"><b>x</b> Hủy bỏ</button>
+					</div>
+					<div class="col-xs-6">
+						<p>Bạn chưa phải là thành viên? <a href="">Đăng ký</a></p>
+						<p>Quên<a href="">mật khẩu?</a></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- End Modal Insert -->
+	
+	<!-- update banle management-->
+		<div class="modal fade" id="updatebanleModal">
+			<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<i class="fa fa-fw fa-close btn-remove"></i>
+					</button>
+					<h4 class="modal-title">Cập nhật cây giống</h4>
+				</div>
+					<div class="modal-body" style="overflow-x:auto;">
+						<table id="tableUpdatebanle" class="table"cellspacing="0" style="width:100%">
+							<tbody>
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+	<!-- Ending update banle Modal-->
+	
+	<!-- Start Modal Update Tên cây-->
+	<div class="modal fade" id="updatetencay">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Cập nhật giá trị</h4>
+				</div>
+				<div class="modal-body">
+					<table style="magrin-left: 20px">
+						<tr>
+							<td><label>ID cây giống:  </label></td>
+							<td class="modal-body2"><p></p></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+						<table style="padding: 20px;">
+							<tr>
+								<td><label>Tên cây cập nhật: </label></td>
+								<td><input type="text" class="form-control" id="valueUpdatetencay" placeholder="Nhập tên muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+								</td>
+							</tr>
+							<table><tr><td><p></p></td></tr></table>
+						</table>
+						<table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updatetencayjs();">
+							<i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+						</div></div>
+				</div>
+			</div>		
+	<!-- End Modal update Tên cay-->
+	<!-- Start Modal Update Khu vu trong-->
+	<div class="modal fade" id="updatekhuvuctrong">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Cập nhật giá trị</h4>
+				</div>
+				<div class="modal-body">
+					<table style="magrin-left: 20px">
+						<tr>
+							<td><label>ID cây giống:  </label></td>
+							<td class="modal-body2"><p></p></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+						<table style="padding: 20px;">
+							<tr>
+								<td><label>Tên khu vực câp nhật: </label></td>
+								<td><input type="text" class="form-control" id="valueUpdatekhuvuctrong" placeholder="Nhập tên khu vực muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+								</td>
+							</tr>
+							<table><tr><td><p></p></td></tr></table>
+						</table>
+						<table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updatekhuvuctrongjs();">
+							<i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+						</div></div>
+				</div>
+			</div>		
+	<!-- End Modal update khu vực trồng-->
+
+	<!-- Start Modal Update Nguoi trong-->
+	<div class="modal fade" id="updatenguoitrong">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Cập nhật giá trị</h4>
+				</div>
+				<div class="modal-body">
+					<table style="magrin-left: 20px">
+						<tr>
+							<td><label>ID cây giống:  </label></td>
+							<td class="modal-body2"><p></p></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+						<table style="padding: 20px;">
+							<tr>
+								<td><label>Tên nguời trồng câp nhật: </label></td>
+								<td><input type="text" class="form-control" id="valueUpdatenguoitrong" placeholder="Nhập tên người trồng muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+								</td>
+							</tr>
+							<table><tr><td><p></p></td></tr></table>
+						</table>
+						<table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updatenguoitrongjs();">
+							<i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+						</div></div>
+				</div>
+			</div>		
+	<!-- End Modal update nguoi trồng-->
+
+	<!-- Start Modal Update phan bon-->
+	<div class="modal fade" id="updatephanbon">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Cập nhật giá trị</h4>
+				</div>
+				<div class="modal-body">
+					<table style="magrin-left: 20px">
+						<tr>
+							<td><label>ID cây giống:  </label></td>
+							<td class="modal-body2"><p></p></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+						<table style="padding: 20px;">
+							<tr>
+								<td><label>Tên phân bón câp nhật: </label></td>
+								<td><input type="text" class="form-control" id="valueUpdatephanbon" placeholder="Nhập tên phân bón muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+								</td>
+							</tr>
+							<table><tr><td><p></p></td></tr></table>
+						</table>
+						<table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updatephanbonjs();">
+							<i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+						</div></div>
+				</div>
+			</div>		
+	<!-- End Modal update phan bon-->
+
+		<!-- Start Modal Update thoi vu-->
+	<div class="modal fade" id="updatethoivu">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Cập nhật giá trị</h4>
+				</div>
+				<div class="modal-body">
+					<table style="magrin-left: 20px">
+						<tr>
+							<td><label>ID cây giống:  </label></td>
+							<td class="modal-body2"><p></p></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+						<table style="padding: 20px;">
+							<tr>
+								<td><label>Tên thời vụ câp nhật: </label></td>
+								<td><input type="text" class="form-control" id="valueUpdatethoivu" placeholder="Nhập tên thời vụ muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+								</td>
+							</tr>
+							<table><tr><td><p></p></td></tr></table>
+						</table>
+						<table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updatethoivujs();">
+							<i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+						</div></div>
+				</div>
+			</div>		
+	<!-- End Modal update thời vụ-->
+
+		<!-- Start Modal Update số lượng-->
+	<div class="modal fade" id="updatesoluong">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Cập nhật giá trị</h4>
+				</div>
+				<div class="modal-body">
+					<table style="magrin-left: 20px">
+						<tr>
+							<td><label>ID cây giống:  </label></td>
+							<td class="modal-body2"><p></p></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+						<table style="padding: 20px;">
+							<tr>
+								<td><label>Số lượng câp nhật: </label></td>
+								<td><input type="text" class="form-control" id="valueUpdatesoluog" placeholder="Nhập số lượng muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+								</td>
+							</tr>
+							<table><tr><td><p></p></td></tr></table>
+						</table>
+						<table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updatesoluongjs();">
+							<i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+						</div></div>
+				</div>
+			</div>		
+	<!-- End Modal update só lượng -->
+
+		<!-- Start Modal Update diên tích-->
+	<div class="modal fade" id="updatedientich">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Cập nhật giá trị</h4>
+				</div>
+				<div class="modal-body">
+					<table style="magrin-left: 20px">
+						<tr>
+							<td><label>ID cây giống:  </label></td>
+							<td class="modal-body2"><p></p></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+						<table style="padding: 20px;">
+							<tr>
+								<td><label>Diện tích câp nhật: </label></td>
+								<td><input type="text" class="form-control" id="valueUpdatesoluong" placeholder="Nhập tên người trồng muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+								</td>
+							</tr>
+							<table><tr><td><p></p></td></tr></table>
+						</table>
+						<table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updatesoluongjs();">
+							<i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+						</div></div>
+				</div>
+			</div>		
+	<!-- End Modal update khu vực trồng-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+	<script type="text/javascript"src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+	<script type="text/javascript" src="../api/js/abi/StorageABI.js"></script>
+	<script type="text/javascript" src="../api/js/banle.js"></script>
+	<script type="text/javascript" src="../api/js/loadpage.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../api/js/libs/parsley.min.js"></script>
+	<script src="../api/js/libs/jquery.uploadfile.js"></script>
+	<!-- end footer -->
+</body>
+</html>

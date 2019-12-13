@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>Metamorphosis Design Free Css Templates</title>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="index.css" rel="stylesheet" type="text/css" />
+        <link href="uploadfile.css" rel="stylesheet">
+        <script type="text/javascript" src="./api/js/libs/qrcode.min.js"></script>
+		
+    //- <script type="text/javascript" src="./qrcode.min.js"></script>
+
+    </head>
+
+    <body onload=getName() class="loadpages">
+<div class="loading" id="loading" style="display: none">
+<div class="blob blob-0"></div>
+</div>
+    <script>function getName(){{$.ajax({method: "GET",url: "http://localhost:4000/login",contentType: "application/json",success: function (response) {if(response!= "no"){document.getElementById("name").innerHTML="";document.getElementById("logout").innerHTML="<a href='http://localhost:4000/signout'>"+"<span class='glyphicon glyphicon-user'>"+response+" <span class='glyphicon glyphicon-log-out'></span></a>"};},error: function (e) {alert("Đã có lỗi xảy ra!");console.log(e);}});}}</script>
+        <div class="container">
+            <div id="contmain">
+                <div id="left1">
+                    <div id="right1">
+                        <div id="header">
+                            <div id="logo">
+                                <h1>SEED PRODUCTION PROCESS</h1>
+                               
+                            </div>
+                            <div id="menu">
+                                <ul>
+                                    <li><a href="/admin" class='active contentcaygiong'>Người dùng</a></li>
+                                    <li><a href="/sanpham">Sản phẩm</a></li>
+                                    <li><a href="#">Giao diện</a></li>
+                                    <li><a href="#">Tạo mã qr</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                                      //- <li >Tên đăng nhập</li>
+                                    <li id="name"><a href="#" data-toggle="modal" data-target="#dangnhapss"> <span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
+                                    <li id="logout"></li>
+                       
+                            </ul>  
+
+                        </div>
+                        <!-- end header --></div>
+                        <!-- start page -->
+                        <div class="row">
+                        <div class="col-md-8">
+                        <div id="page">   
+                        <!-- start content -->
+<div id="content">
+<div class="post">
+<button class="btn btn-success" data-toggle="modal" data-target="#Insertuserform">Craete User</button>
+<h1 class="title"><a href="#">Thông tin người dùng</a></h1>
+<div class="row table-responsive-sm">
+<table class="table table-bordered table-condensed table-hover table-sm" id="user">
+<thead >
+<tr class="d-flex">
+<th></th>
+<th>STT</th>
+<th>Id</th>
+<th>Tên nguời dùng</th>
+<th>email</th>
+<th>password</th>
+<th>Giới tính</th>
+<th>Ngày sinh</th>
+<th>Số điện thoại</th>
+<th>Địa chỉ</th>
+<th>Anh đại diện</th>
+<th>Thời gian tạo</th>
+<th>Thời gian chỉnh sửa</th>
+<th>Quyền hạn</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+    </table>
+    <div class="pagination-container">
+        <nav><ul id="paginationuser" class="pagination"></ul></nav></div>
+    </div>
+                                   </div>
+</div>
+                        </div>
+                        </div>
+                        <!-- end content -->
+                        <div id="bottom" style="clear: both;"></div>
+                        </div>
+                            <!-- end page --><!-- start footer -->
+                            <!-- start footer -->
+                            <footer>
+                                <div class="wrapper">
+                                    <div class="rights">
+                                        <img src="" alt="" class="footer_logo"/>
+                                    </div>
+
+                                    <nav>
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><p class="nav navbar-nav navbar-right">Nguyen Chi Linh <a href="http://pixelhint.com" target="_blank">Gmail.com</a></p></li>
+                                            <li><a href="#">Admin</a></li>
+                                            <li><a href="#">FAQ</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>    
+                            </footer>
+                            <!--  End footer  -->
+                        </div>
+</div>
+                </div>
+</div>
+            <div class="modal fade" id="dangnhapss" role="dialog"><div class="modal-dialog">
+            <div class="modal-content"><div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h2 class="modal-title" style="text-align: center"><span class="glyphicon glyphicon-lock"></span> Đăng nhập người dùng</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" >
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Tên người dùng</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="username" id="usernamess" placeholder="Nhập tên của bạn đã đăng kí" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Mật khẩu</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="passwordss" id="passwordss" placeholder="Nhập mật khẩu của bạn" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>   
+                    <div class="form-group">
+                     <div class="col-xs-10 col-xs-offset-2">
+                         <input type="checkbox" name=""> Ghi nhớ tôi 
+                     </div>                     
+                     </div>    
+                     <button type="button" onclick="adduserss()" class="btn btn-success btn-sm" style="width: 100%">
+                     <i class="fa fa-plus"></i> Đăng nhập</button>
+                </form>
+</div>
+    <div class="modal-footer">
+        
+        <div>
+            <label>Nếu bạn chưa phải là thành viên hãy <li><a href="#" data-toggle="modal" data-target="#Dangkiform"><span class="glyphicon glyphicon-log-in"></span>Đăng kí</a></li></label>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            <div class="modal fade" id="Insertuserform" role="dialog"><div class="modal-dialog">
+            <div class="modal-content"><div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">x</button>
+                <h2 class="modal-title" style="text-align: center"><span class="glyphicon glyphicon-lock"></span> Đăng ký người dùng</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" >
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Họ Tên</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="usernamedk" id="usernamedk" placeholder="Họ tên người dùng" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Email</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="emaildk" id="emaildk" placeholder="Email" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Mật khẩu</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="passworddk" id="passworddk" placeholder="Mật khẩu" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Nhập lại mật khẩu</label>
+
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="passconfim" id="passagain" placeholder="Mật khẩu" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="council" class="col-sm-2 control-label">Giới tính</label>
+
+                        <div class="col-sm-2">
+                            <label>Nam: </label><input type="radio" name="gender" class="gender" value="Nam" checked/> 
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Nữ: </label><input type="radio" name="gender" class="gender" value="Nữ"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="birthplace" class="col-sm-2 control-label">Ngày sinh</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" name= "birthday" id="birthday" placeholder="Ngày sinh" data-parsley-required="true" data-parsley-type="number" data-parsley-error-message="Bắt buộc là số.">
+                    </div>
+                    </div>
+                <!--  -->
+                    <div class="form-group">
+                    <label for="number" class="col-sm-2 control-label">Số điện thoại</label>
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control"name="sdtuser" id="sdtuser" placeholder="Số điện thoại" data-parsley-required="true" data-parsley-type="number" data-parsley-error-message="Bắt buộc là số.">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Địa chỉ</label>
+
+                    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="diachi" id="diachi" placeholder="Địa chỉ" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Ảnh đại diện</label>
+                    <div class="col-sm-10">
+                    <input type="file" class="form-control" name="anhuser" id="anhuser" placeholder="Địa chỉ" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Quyền user</label>
+                    <div class="col-sm-10">
+                    <select class="browser-default custom-select" id="roleuser">
+                    <option selected>Quyền</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Quản lý giai đoạn cây giống">Quản lý giai đoạn cây giống</option>
+                    <option value="Quản lý giai đoạn cây ăn trái">Quản lý giai đoạn cây ăn trái</option>
+                    <option value="Quản lý giai đoạn thu hoạch">Quản lý giai đoạn thu hoạch</option>
+                    <option value="Quản lý giai đoạn phân phối">Quản lý giai đoạn phân phối</option>
+                    <option value="Quản lý giai đoạn bán lẻ">Quản lý giai đoạn bán lẻ</option>
+                    <option value="Khách hàng">Khách hàng</option>
+                    </select>
+                    </div>
+                    </div>
+                    <button type="button" onclick="adduser()" class="btn btn-success btn-sm" style="width: 100%">Đăng ký</button>
+                    <i class="fa fa-plus"></i> 
+            
+                </form>
+                </div>
+            <div class="modal-footer">
+            </div>
+            
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="updateuserModal">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">
+<i class="fa fa-fw fa-close btn-remove"></i>
+</button>
+<h4 class="modal-title">Cập nhật cây giống</h4>
+</div>
+<div class="modal-body" style="overflow-x:auto;">
+<table id="tableUpdatecaygiong" class="table"cellspacing="0" style="width:100%">
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+    <!-- Start Modal Update Tên người dùng-->
+<div class="modal fade" id="updateusername">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Cập nhật giá trị</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table style="magrin-left: 20px">
+                            <tr>
+                                <td><label>ID cây giống:  </label></td>
+                            <td class="modal-body2"><p></p></td>
+                        </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="padding: 20px;">
+                                <tr>
+                                    <td><label>Tên người dung cập nhật: </label></td>
+                                    <td><input type="text" class="form-control" id="valueUpdateusername" placeholder="Nhập tên muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                                    </td>
+                        </tr>
+                        <table><tr><td><p></p></td></tr></table>
+                        </table>
+                        <table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updateusernamejs();">
+                            <i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+                        </div></div>
+                </div>
+            </div>
+<div class="modal fade" id="updateemail">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Cập nhật giá trị</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table style="magrin-left: 20px">
+                            <tr>
+                                <td><label>ID cây giống:  </label></td>
+                            <td class="modal-body2"><p></p></td>
+                        </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="padding: 20px;">
+                                <tr>
+                                    <td><label>Tên người dung cập nhật: </label></td>
+                                    <td><input type="text" class="form-control" id="valueUpdateemail" placeholder="Nhập tên muốn thay đổi" data-parsley-required="true" data-parsley-error-message="Không được rỗng.">
+                                    </td>
+                        </tr>
+                        <table><tr><td><p></p></td></tr></table>
+                        </table>
+                        <table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updateemailjs();">
+                            <i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+                        </div></div>
+                </div>
+            </div>
+            <div class="modal fade" id="updateroleuser">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4 class="modal-title">Cập nhật giá trị</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table style="magrin-left: 20px">
+                            <tr>
+                                <td><label>ID cây giống:  </label></td>
+                            <td class="modal-body2"><p></p></td>
+                        </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table style="padding: 20px;">
+                                <tr>
+                                    <td><label>Cập nhật vai trò người dùng: </label></td>
+                                    <td><select class="browser-default custom-select" id="valueUpdateroleuser">
+                    <option selected>Quyền</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Quản lý giai đoạn cây giống">Quản lý giai đoạn cây giống</option>
+                    <option value="Quản lý giai đoạn cây ăn trái">Quản lý giai đoạn cây ăn trái</option>
+                    <option value="Quản lý giai đoạn thu hoạch">Quản lý giai đoạn thu hoạch</option>
+                    <option value="Quản lý giai đoạn phân phối">Quản lý giai đoạn phân phối</option>
+                    <option value="Quản lý giai đoạn bán lẻ">Quản lý giai đoạn bán lẻ</option>
+                    <option value="Khách hàng">Khách hàng</option>
+                    </select></td>
+                        </tr>
+                        <table><tr><td><p></p></td></tr></table>
+                        </table>
+                        <table valign="center"><tr><td>Bạn chắc chắn muốn thay đổi?</td></tr></table><p></p></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal"onclick="updateroleuserjs();">
+                            <i class="far fa-edit"></i>Sửa</button>&nbsp;<button type="button" class="btn btn-danger btn-xs" data-dismiss="modal"> <i class="far fa-trash-alt"></i>Hủy</button>
+                        </div></div>
+                </div>
+            </div>
+<!-- Ending update caygiong Modal-->
+<!-- End Modal Insert -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+<script type="text/javascript"src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript" src="../api/js/abi/StorageABI.js"></script>
+<script type="text/javascript" src="../api/js/libs/jquery.validate.js"></script>
+<script type="text/javascript" src="../api/js/loadpage.js"></script>
+<script type="text/javascript" src="../api/js/user.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../api/js/libs/parsley.min.js"></script>
+<script src="../api/js/libs/jquery.uploadfile.js"></script>
+<!--Begin export excel-->
+<script type="text/javascript" src="../api/js/libs/jquery.table2excel.js"></script>
+<!--End export excel-->
+<!--Time moment-->
+<script type="text/javascript" src="../api/js/libs/momentjs.js"></script>
+//- <script type="text/javascript" src="./api/js/libs/qrcode.min.js"></script>
+//- <script type="text/javascript" src="../api/js/createqrcode.js"><script>
+<!--End time moment-->
+</body>
+</html>
